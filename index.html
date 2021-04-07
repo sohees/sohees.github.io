@@ -1,77 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sohee Portfolio</title>
-    <link rel="stylesheet" href="css/slider.css">
-    <script src="js/jquery-1.12.4.js"></script>
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/brands.min.css">
+    <link rel="stylesheet" href="../css/solid.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
+    <div class="boxwrap">
 
-    <main>
-        <section class="slides"> 
-          
-          <section class="slides-nav">
-            <nav class="slides-nav__nav">
-              <button class="slides-nav__prev js-prev">Prev</button>
-              <button class="slides-nav__next js-next">Next</button>
-            </nav>
-          </section>
-        
-          <section class="slide is-active">
-            <div class="slide__content">
-              <figure class="slide__figure"><div class="slide__img" style="background-image: url(./img/main_1.jpg)"></div></figure>
-              <header class="slide__header">
-                <h2 class="slide__title">
-                  <span class="title-line"><span>JEI</span></span>
-                  <span class="title-line"><span>Hybrid App</span></span>
-                </h2>
-              </header>
-            </div>
-          </section>
-        
-          <section class="slide">
-            <div class="slide__content">
-              <figure class="slide__figure"><div class="slide__img" style="background-image: url(./img/main_2.jpg)"></div></figure>
-              <header class="slide__header">
-                <h2 class="slide__title">
-                  <span class="title-line"><span>Responsive</span></span>
-                  <span class="title-line"><span>Web</span></span>
-                </h2>
-              </header>
-            </div>
-          </section>
-        
-          <section class="slide">
-            <div class="slide__content">
-              <figure class="slide__figure"><div class="slide__img" style="background-image: url(./img/main_3.jpg)"></div></figure>
-              <header class="slide__header">
-                <h2 class="slide__title">
-                  <span class="title-line"><span>Mobile</span></span>
-                  <span class="title-line"><span>Web</span></span>
-                </h2>
-              </header>
-            </div>
-          </section>
-        
-          <section class="slide">
-            <div class="slide__content">
-              <figure class="slide__figure"><div class="slide__img" style="background-image: url(./img/main_4.jpg)"></div></figure>
-              <header class="slide__header">
-                <h2 class="slide__title">
-                  <span class="title-line"><span>Web</span></span>
-                  <span class="title-line"><span>Standard</span></span>
-                </h2>
-              </header>
-            </div>
-          </section>
-        </section>
-        </main>
+        <div class="box" style="background-color:black;">
+            <div class="inner">
+                <div class="contents_wrap">
+                    <div class="jb-box">
+                        <video muted autoplay loop>
+                            <source src="./video/star.mp4" type="video/mp4">
+                            <strong>Your browser does not support the video tag.</strong>
+                        </video>
+                    </div>
+                    <div class="type_wrap">
+                        <span class="typed"></span>
 
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      <script src="js/slider.js"></script>
+        <div class="box work">
+            <div class="inner">
+                <div class="arrow_wrap">
+                    <span id="slider__left">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span id="slider__right">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </div>
+
+                <div class="transparent"></div>
+                <div class="iframe_wrap">
+                    <iframe src="./partials/slider.html" frameborder=0 framespacing=0 marginheight=0 marginwidth=0
+                        scrolling=no vspace=0></iframe>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="box profile">
+            <div class="inner">
+                <div class="transparent"></div>
+                <div class="iframe_wrap">
+                    <iframe src="./partials/profile.html" frameborder=0 framespacing=0 marginheight=0 marginwidth=0
+                        scrolling=no vspace=0></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="box skill">
+            <div class="inner">
+                <div class="transparent"></div>
+                <div class="iframe_wrap">
+                    <iframe src="./partials/skill.html" frameborder=0 framespacing=0 marginheight=0 marginwidth=0
+                        scrolling=no vspace=0></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="box career">
+            <div class="inner">
+                <div class="transparent"></div>
+                <div class="iframe_wrap">
+                    <iframe src="./partials/career.html" frameborder=0 framespacing=0 marginheight=0 marginwidth=0
+                        scrolling=no vspace=0></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="box contact">
+            <div class="inner">
+                <div class="transparent"></div>
+                <div class="iframe_wrap">
+                    <iframe src="./partials/contact.html" frameborder=0 framespacing=0 marginheight=0 marginwidth=0
+                        scrolling=no vspace=0></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <span id="typed1"></span>
+
+    <script type="text/javascript" src="./js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="./js/typed.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
 </body>
+
 </html>
