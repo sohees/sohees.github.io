@@ -1,13 +1,12 @@
 (function ($) {
 
-    // 코드 숮ㅇ (2)
-    // 업로드 (3)
-    // 2. 옆푼디 메뉴....이동..? (1)
-
     var ScrollLayout = {
 
         init: function () {
+            this.viewScroll();
+        },
 
+        viewScroll: function(){
             var elm = ".box";
             $(elm).each(function (index) {
 
@@ -66,10 +65,6 @@
         setctionCount3: 0,
         setctionCount4: 0,
 
-        init: function () {
-
-        },
-
         setPosition: function (p) {
             this.position = p;
         },
@@ -101,12 +96,10 @@
                 IframeLoading.skill();
             }
 
-            if (this.section === 4 && !this.setctionCount4) {
+            if (this.section === 5 && !this.setctionCount4) {
                 this.setctionCount4 = 1;
                 IframeLoading.career();
             }
-
-
 
             if (this.section === 6) {
                 $('.contact .transparent').on('click', function () {
@@ -120,24 +113,8 @@
             return this.section;
         },
 
-
     }
 
-
-    var Typing = {
-
-        init: function () {
-            var typed = new Typed('.typed', {
-                strings: ['^100안녕하세요.^1500 박소희 입니다.^1500', '저는^1500 웹 개발자 입니다.^1500',
-                    '반응형^500 웹^500,^1500 웹^500 퍼블리싱^500,^1500 프론트엔드^500, 백엔드^500, 하이브리드 앱^500 등^1500',
-                    '다양한^500 작업을^1500 하고 있습니다.^1500', '언제나^500 겸손하고^1500 성실하게^500 노력하겠습니다.^1500',
-                    '방문해주셔서^500 감사합니다.^5000'
-                ],
-                loop: true
-            });
-        }
-
-    }
 
     var SlideControl = {
         init: function () {
@@ -150,11 +127,8 @@
         }
     }
 
+
     var IframeLoading = {
-
-        init: function () {
-
-        },
 
         skill: function () {
             $('.skill iframe')[0].contentWindow.$('body').trigger('loading');
@@ -167,22 +141,62 @@
         profile: function () {
             $('.profile iframe')[0].contentWindow.$('body').trigger('click');
         }
-
     }
+
+
+    var intro = {
+
+        init: function(){
+            this.videoResize();
+            this.typing();
+        },
+
+        typing: function(){
+            var typed = new Typed('.typed', {
+                strings: ['^100안녕하세요.^1500 박소희 입니다.^1500', '저는^1500 웹 개발자 입니다.^1500',
+                    '반응형^500 웹^500,^1500 웹^500 퍼블리싱^500,^1500 프론트엔드^500, 백엔드^500, 하이브리드 앱^500 등^1500',
+                    '다양한^500 작업을^1500 하고 있습니다.^1500', '언제나^500 겸손하고^1500 성실하게^500 노력하겠습니다.^1500',
+                    '방문해주셔서^500 감사합니다.^5000'
+                ],
+                loop: true
+            });
+        },
+
+        videoResize: function(){
+            var ratio = $(window).height() / $(window).width() * 100;
+
+            if(ratio > 177 || ratio < 55){
+                if(ratio < 170){
+                    $('video').removeClass('video_height')
+                }
+
+                if(ratio < 55 ){
+                    $('video').addClass('video_width');//
+                }else{
+                    $('video').removeClass('video_width');
+                }
+
+            }else{
+                $('video').addClass('video_height');
+                $('video').removeClass('video_width');
+            }
+        }
+    }
+    
 
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     }
 
     window.onload = function () {
-        ScrollPosition.init();
+        intro.init();
         ScrollLayout.init();
-        Typing.init();
         SlideControl.init();
     }
 
-    window.resize = function () {
-        ScrollPosition.height = $(window).height()
+    window.onresize = function () {
+        ScrollPosition.height = $(window).height();
+        intro.videoResize();
     }
 
 })(jQuery);

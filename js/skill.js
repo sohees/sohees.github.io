@@ -37,7 +37,6 @@
             }, t);
 
         }
-        console.log(1);
 
         var c1 = {
             el: $('.c1.circle'),

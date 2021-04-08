@@ -1,20 +1,16 @@
 (function ($) {
 
-  var messageBox = document.querySelector('.js-message');
   var btn = document.querySelector('.js-message-btn');
-  var card = document.querySelector('.js-profile-card');
-  var closeBtn = document.querySelectorAll('.js-message-close');
-
   var timer = 0;
   var text;
 
-  var getButton = function () {
+  function getButton () {
     text = $('.tmi').text() === 'CLOSE' ? 'TMI' : 'CLOSE';
 
     if (text === 'CLOSE') {
-      $('.overlay').fadeIn(800);
+      $('.overlay').fadeIn(500);
     } else {
-      $('.overlay').fadeOut(800);
+      $('.overlay').fadeOut(500);
     }
 
     $('.tmi').fadeOut();
@@ -25,7 +21,7 @@
     timer = setTimeout(function () {
       $('.tmi').text(text);
       $('.tmi').fadeIn();
-    }, 800);
+    }, 500);
 
   }
 

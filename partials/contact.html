@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fa-events-icons-ready">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -17,87 +17,87 @@
 <body>
 
   <section id="contact">
+    <div class="container">
 
-    <header class="basic__header">
-      <h2 class="basic__title">
-        <span class="title-line"><span>contact</span>
-      </h2>
-    </header>
+      <header class="basic__header">
+        <h2 class="basic__title">
+          <span class="title-line"><span>contact</span>
+        </h2>
+      </header>
 
-    <div class="contact-wrapper">
+      <div class="contact-wrapper">
 
-      <!-- LEFT -->
+        <!-- LEFT -->
 
-      <form id="contact-form" class="form-horizontal" role="form">
+        <form id="contact-form" class="form-horizontal" role="form">
 
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+            </div>
           </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+            </div>
+          </div>
+
+          <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+          <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+            <div class="button">
+              <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+            </div>
+          </button>
+
+        </form>
+
+        <!-- RIGHT -->
+
+        <div class="direct-contact-container">
+
+          <ul class="contact-list">
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City,
+                  Seoul</span></i></li>
+
+            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                    href="tel:010-8869-2478" title="Give me a call">010-8869-2478</a></span></i></li>
+
+            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#"
+                    title="Send me an email">juni447845@gmail.com</a></span></i></li>
+          </ul>
+          <hr>
+          <ul class="social-media-list">
+
+            <li>
+              <span>
+                <i class="fab fa-github"></i>
+              </span>
+            </li>
+            <li>
+              <span>
+                <i class="fab fa-twitter"></i>
+              </span>
+            </li>
+            <li>
+              <span>
+                <i class="fab fa-instagram"></i>
+              </span>
+            </li>
+            <li>
+              <span>
+                <i class="fab fa-codepen"></i>
+              </span>
+            </li>
+          </ul>
+          <hr>
+
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
         </div>
-
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-          </div>
-        </div>
-
-        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-
-        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-          <div class="button">
-            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-          </div>
-        </button>
-
-      </form>
-
-      <!-- RIGHT -->
-
-      <div class="direct-contact-container">
-
-        <ul class="contact-list">
-          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City,
-                Seoul</span></i></li>
-
-          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
-                  href="tel:010-8869-2478" title="Give me a call">010-8869-2478</a></span></i></li>
-
-          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#"
-                  title="Send me an email">juni447845@gmail.com</a></span></i></li>
-        </ul>
-        <hr>
-        <ul class="social-media-list">
-
-          <li>
-            <span>
-              <i class="fab fa-github"></i>
-            </span>
-          </li>
-          <li>
-            <span>
-              <i class="fab fa-twitter"></i>
-            </span>
-          </li>
-          <li>
-            <span>
-              <i class="fab fa-instagram"></i>
-            </span>
-          </li>
-          <li>
-            <span>
-              <i class="fab fa-codepen"></i>
-            </span>
-          </li>
-        </ul>
-        <hr>
-
-        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-
       </div>
-
     </div>
-
   </section>
 
   <script src="../js/jquery-1.12.4.js"></script>

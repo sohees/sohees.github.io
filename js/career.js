@@ -38,7 +38,6 @@
 
     $('body').on('loading', function(e) {
         loading();
-
     });
 
   })(jQuery);

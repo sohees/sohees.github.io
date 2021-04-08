@@ -5,6 +5,8 @@ body {
   color: rgb(50,50,50);
   font-family: 'Open Sans', sans-serif;
   font-size: 112.5%;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .basic__title {
