@@ -6,10 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
-    test
+    <button>test</button>
+
+    <button id="btn1" class="stop"></button>
+
+    <script>
+         btn1.onclick = function (e) {
+            $.ajax({
+                url: "/add",
+                type: 'POST',
+                data: {
+                    txt: 1
+                },
+                success: function (data) {
+                    alert(data);
+
+                },
+                error: function (xhr, status) {
+                    alert("에러가 발생했습니다.");
+                }
+            });
+        }
+
+
+    </script>
 </body>
 
 </html>
